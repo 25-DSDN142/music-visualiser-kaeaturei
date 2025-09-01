@@ -1,12 +1,133 @@
-let sunY = 400;
+//vocal, drum, bass, and other are volumes ranging from 0 to 100
+function draw_one_frame(vocal, drum, bass, other) {
+ 
+  //let sunY = 100;
+  //let sunSize = 20;
+
+  let drumMap = map(drum, 0, 100, 20, 200);
+  let bassMap = map(bass, 0, 100, 20, 200);
+
+
+  background (253, 236, 242);
+  rectMode (CENTER);
+
+  //textFont('Verdana'); // please use CSS safe fonts
+  //textSize(24);
+
+  // main body of the record player
+  fill (241, 173, 192);
+  strokeWeight (0);
+  rect (460, 300, 400, 275);
+
+  // details
+  fill (19, 31, 27);
+  noStroke ();
+  ellipse (390, 300, 240, 240);
+
+  ellipse (280,420, 20,20);
+  ellipse (470,190, 10,10);
+  ellipse (580, 220, 50, 50);
+
+  rect (330, 165, 30, 8);
+  rect (590, 165, 30, 8);
+  rect (628, 400, 25, 14);
+  rect (590, 400, 25, 14);
+
+  // details
+  noFill (0);
+  strokeWeight (4);
+  stroke (19, 31, 27);
+  ellipse (500,200, 20,20);
+
+  //detail for stretched circle on the side
+  rect (630, 300, 20, 100)
+  noFill ();
+  strokeWeight (4);
+  stroke (19, 31, 27);
+  ellipse (630, 247, 20, 20);
+  ellipse (630, 353, 20, 20);
+
+  fill (241, 173, 192);
+  noStroke ();
+  ellipse (630, 250, 18, 20);
+  rect (630, 255, 17, 18);
+  ellipse (630, 350, 18, 20);
+  rect (630, 345, 17, 18);
+
+  // moving grey part of the record
+  fill (47, 48, 47);
+  noStroke ();
+  ellipse (391, 300, bassMap, bassMap);
+
+  // middle part of the record, still
+  fill (133, 88, 143);
+  noStroke ();
+  ellipse (391, 300, 90, 90);
+
+  fill (19, 31, 27);
+  noStroke ();
+  ellipse (391, 300, 20,20);
+  fill (0);
+  noStroke ();
+  ellipse (391, 300, 10, 10);
+
+
+ 
+  
+
+  //stroke (drumMap, 80,80);
+  //strokeWeight (8);
+  //stroke (255);
+ // noFill();
+
+ // for(let i = 1; i <= drumMap; i++) {
+    //let y = i * 40;
+    //ellipse (200, y, circleSize, circleSize);
+
+ // }
+
+  //display "words"
+  //let words = vocal;
+  //textAlign(CENTER);
+  //textSize(vocal);
+  //fill (255);
+  //text(words, width/2, height/3);
+  
+
+
+
+
+
+ //colorMode (HSB, 100);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*let sunY = 400;
+
 let sunSize = 20;
 
 
-// vocal, drum, bass, and other are volumes ranging from 0 to 100
-function draw_one_frame(vocal, drum, bass, other) {
-  colorMode (HSB, 100);
-  background (0);
-  rectMode (CENTER);
+
 
 
   let drumMap = map(drum, 0, 100, 5, 70);
@@ -141,4 +262,5 @@ function draw_one_frame(vocal, drum, bass, other) {
 //textAlign(CENTER);
 //textSize(vocal);
 //text(words, width/2, height/3);
-//}
+//} */
+
