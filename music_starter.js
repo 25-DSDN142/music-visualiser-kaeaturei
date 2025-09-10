@@ -19,10 +19,23 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   let pivotX = 580;
   let pivotY = 220;
 
-
-
   background (253, 236, 242);
   rectMode (CENTER);
+
+ if (seconds > 239 && seconds < 254) {
+  push();
+  noStroke();
+  rectMode(CENTER);
+
+  if (frameCount % 19 < 15) {
+    fill (255, 100);
+  } else {
+    fill (0, 100);
+  }
+
+  rect (width/2, height/2, width, height);
+  pop ();
+  }
 
   //first chorus where heaps of circles come in
 if (seconds > 33.5 && seconds < 47) {  
@@ -52,6 +65,7 @@ if (seconds > 33.5 && seconds < 47) {
 
   pop();
 }
+
 
 // second chorus but turned to pink
 if (seconds > 80.5 && seconds < 109.5) {  
@@ -112,13 +126,14 @@ if (seconds > 158.5 && seconds < 254) {
   pop();
 }
 
+
 //bigger louder part of the third chorus to go over top of the purple
-if (seconds > 189.7 && seconds < 254) {  
+if (seconds > 189 && seconds < 254) {  
   push();
   translate(450, 300); // center of canvas
   scale (3);
   noStroke();
-  fill(247, 215, 227, 200); // transparent pink
+  fill(242, 194, 212, 200); // transparent pink
 
   let numEllipses = 15; 
   for (let i = 0; i < numEllipses; i++) {
@@ -141,11 +156,12 @@ if (seconds > 189.7 && seconds < 254) {
     pop()
 }
 
+
   textFont('Tahoma'); // please use CSS safe fonts
   textStyle (BOLD);
 
   //background moving rectangles
-  if (seconds > 2 && seconds < 254) {  
+  if (seconds > 1.5 && seconds < 254) {  
   push();
   fill (243, 220, 247);
   noStroke ();
