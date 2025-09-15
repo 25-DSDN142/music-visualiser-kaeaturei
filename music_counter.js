@@ -8,7 +8,7 @@ background(0);
 rectMode(CENTER);
 textAlign(CENTER);
 textFont('Luminari '); // please use CSS safe fonts
-
+//hello
 if (words == "") {
   wordBrightness = int(wordBrightness * 0.95); //fade brightness 
   words = lastWords; // safe the last known word so we can display 
